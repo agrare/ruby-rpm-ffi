@@ -6,9 +6,13 @@ module RPM
 
     begin
       ffi_lib ['rpm',
-               'librpm.so.8', # Tumbleweed
-               'librpm.so.7', # fedora 23
-               'librpm.so.3', 'librpm.so.2', 'librpm.so.1']
+               'librpm.so.10',
+               'librpm.so.9',
+               'librpm.so.8',
+               'librpm.so.7',
+               'librpm.so.3',
+               'librpm.so.2',
+               'librpm.so.1']
     rescue LoadError => e
       raise(
         "Can't find rpm libs on your system: #{e.message}"
